@@ -9,6 +9,8 @@ var searchHistorySchema = new mongoose.Schema({
     timestamp: { type: Date, required: true }
 });
 
+searchHistorySchema.index({ timestamp: 1 });
+
 //Model for searchHistory Data operations
 var searchHistoryModel = mongoose.model('searchdata', searchHistorySchema);
 
