@@ -26,6 +26,7 @@ var searchHistoryModel = model.model;
 module.exports = {
     //Save search term in db for search history
     savesearchterm: function(searchData) {
+    		console.log("Inside savesearchterm");
         var newEntry = new searchHistoryModel(searchData);
         //.save() returns a promise
         var prms = newEntry.save();
