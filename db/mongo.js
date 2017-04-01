@@ -3,7 +3,8 @@ var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 var model = require('../models/searchHistoryModel.js');
 //MONGOLAB_URI for heroku-mLab deployment
-var url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/searcHistory';
+var url = process.env.MONGOLAB_URI;
+//var url = 'mongodb://localhost:27017/searcHistory';
 
 console.log('Inside mongo.js');
 
