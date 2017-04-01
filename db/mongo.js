@@ -2,9 +2,10 @@
 var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 var model = require('../models/searchHistoryModel.js');
+var localUrl = 'mongodb://localhost:27017/searcHistory';
 //MONGOLAB_URI for heroku-mLab deployment
-var url = process.env.MONGOLAB_URI;
-//var url = 'mongodb://localhost:27017/searcHistory';
+//mongodb://theokeles:Ckdnsdacd#050@ds147510.mlab.com:47510/search_history
+var url = process.env.MONGOLAB_URI || localUrl;
 
 console.log('Inside mongo.js');
 
@@ -53,3 +54,4 @@ module.exports = {
         return clrPrms;
     }
 };
+

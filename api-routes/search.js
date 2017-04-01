@@ -61,9 +61,9 @@ searchApi.get('/imagesearch/:term', function(request, response, next) {
         } else {
             //.map() takes an array and calls a function on 
             //each element in order & returns an array
-            //var returnResponse = body.value.map(createResponse);
-            //response.status(200).json(returnResponse);
-            response.status(200).json(body.value.map(createResponse));
+            var returnResponse = body.value.map(createResponse);
+            response.status(200).json(returnResponse);
+            //response.status(200).json(body.value.map(createResponse));
         }
     });
 
